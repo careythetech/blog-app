@@ -8,7 +8,7 @@ const sportSchema = new mongoose.Schema({
 
     description: {
         type: String,
-        required: true,
+        //required: true,
         maxlength: 1000
     },
 
@@ -21,7 +21,7 @@ const sportSchema = new mongoose.Schema({
         type: Date,
     },
 },{
-        timestamps: true,
+       // timestamps: true,
 });
 
 module.exports = mongoose.model('Sport', sportSchema);

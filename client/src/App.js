@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route } from "react-router-dom";
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import CovidList from './components/CovidList';
+import PoliticsList from './components/PoliticsList';
+import SportsList from './components/SportsList';
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import SportForm from './components/SportForm';
+import CovidForm from './components/CovidForm';
+import PoliticForm from './components/PoliticForm';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Route to='/' exact component={Navbar} />
+      <Route path='/covidsList' exact component={CovidList} />
+      <Route path='/politicsList' exact component={PoliticsList} />
+      <Route path='/sportsList' exact component={SportsList} />
+      <Route path='/addSport' exact component={SportForm} />
+      <Route path='/addCovid' exact component={CovidForm} />
+      <Route path='/addPolitic' exact component={PoliticForm} />
+
+      
+      {/* <Footer /> */}
     </div>
   );
 }
