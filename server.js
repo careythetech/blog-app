@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(`${__dirname}/client/build`));
 
 app.get('/*', (req, res) => {
-    res.sendFile(`${__dirname}/client/build/index.html`)
+    res.sendFile(`${__dirname}/client/build/index.html`);
 });
 
 const uri = process.env.ATLAS_URI;
@@ -35,5 +35,5 @@ app.use('/api/sport/', sportRouter);
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
-    console.log(`Server is running on port: ${port}`)
+    console.log(`Server is running on port: ${port}`);
 });
