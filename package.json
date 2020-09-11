@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "blogs",
   "main": "server.js",
+  "engines":{
+    "node": "12.10.0"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"cd articles && npm start\"",
