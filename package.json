@@ -4,7 +4,8 @@
   "description": "blogs",
   "main": "server.js",
   "engines":{
-    "node": "12.10.0"
+    "node": "12.10.0",
+    "npm": "6.10.3"
   },
   "scripts": {
     "start": "node server.js",
