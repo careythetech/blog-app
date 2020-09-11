@@ -28,12 +28,12 @@ function CovidList() {
                 aboutProps: { title: item.title, authorname: 
                 item.authorname, date: item.date, id: item._id } }} >Edit Sport </Link>
         </div>
-    ))
+    ));
     return (
         <div>
             <h1>Covid News</h1>
             {renderList()}
         </div>
-    )
-}
-export default CovidList
+    );
+};
+export default CovidList;

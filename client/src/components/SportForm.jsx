@@ -8,19 +8,19 @@ const SportForm = (props) => {
         authorname: '',
         description: '',
         date: ''
-    })
+    });
     const [editData, setEditData] = useState({})
 
     const handleChange = e => {
         setSportData({ ...sportData, [e.target.name]: e.target.value })
-    }
+    };
 
     const handleSubmit = e => {
         e.preventDefault()
         axios.post('http://localhost:3002/api/sport/add', sportData)
             .then(res => window.location = '/sportsList')
             .catch(error => console.log(error))
-    }
+    };
 
     const handleEdit = (id, e) => {
         e.preventDefault()
@@ -29,8 +29,7 @@ const SportForm = (props) => {
             .catch(error => console.log(error))
         console.log(e)
         console.log(id)
-
-    }
+    };
 
 
 
@@ -39,7 +38,7 @@ const SportForm = (props) => {
             //const {authorname, title} = props.location.aboutProps
             setEditData(props.location.aboutProps)
         }
-    }, [])
+    }, []);
 
     return (
         <div>
@@ -61,7 +60,7 @@ const SportForm = (props) => {
                 {props.location.aboutProps ? <input type="submit" value="edit" onClick={(e) => handleEdit(editData.id, e)} /> : <input type="submit" value="submit" onClick={handleSubmit} />}
             </form>
         </div>
-    )
-}
+    );
+};
 
-export default SportForm
+export default SportForm;

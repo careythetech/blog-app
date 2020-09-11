@@ -28,12 +28,12 @@ function SportsList() {
                 aboutProps: { title: item.title, authorname: 
                 item.authorname, date: item.date, id: item._id } }} >Edit Sport News </Link>
         </div>
-    ))
+    ));
     return (
         <div>
             <h1>Sport News</h1>
             {renderList()}
         </div>
-    )
-}
-export default SportsList
+    );
+};
+export default SportsList;

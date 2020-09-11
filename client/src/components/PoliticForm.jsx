@@ -8,19 +8,19 @@ const CovidForm = (props) => {
         description: '',
         authorname: '',
         date: ''
-    })
+    });
     const [editData, setEditData] = useState({})
 
     const handleChange = e => {
         setPoliticData({ ...politicData, [e.target.name]: e.target.value })
-    }
+    };
 
     const handleSubmit = e => {
         e.preventDefault()
         axios.post('http://localhost:3002/api/politic/add', politicData)
             .then(res => window.location = '/politicsList')
             .catch(error => console.log(error))
-    }
+    };
 
     const handleEdit = (id, e) => {
         e.preventDefault()
@@ -29,8 +29,7 @@ const CovidForm = (props) => {
             .catch(error => console.log(error))
         console.log(e)
         console.log(id)
-
-    }
+    };
 
 
 
@@ -39,7 +38,7 @@ const CovidForm = (props) => {
             //const {authorname, title} = props.location.aboutProps
             setEditData(props.location.aboutProps)
         }
-    }, [])
+    }, []);
 
     return (
         <div>
@@ -61,7 +60,7 @@ const CovidForm = (props) => {
                 {props.location.aboutProps ? <input type="submit" value="edit" onClick={(e) => handleEdit(editData.id, e)} /> : <input type="submit" value="submit" onClick={handleSubmit} />}
             </form>
         </div>
-    )
-}
+    );
+};
 
-export default CovidForm
+export default CovidForm;

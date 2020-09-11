@@ -28,12 +28,12 @@ function PoliticsList() {
                 aboutProps: { title: item.title, authorname: 
                 item.authorname, date: item.date, id: item._id, description:item.description } }} >Edit Politics News </Link>
         </div>
-    ))
+    ));
     return (
         <div>
             <h1>Politic News</h1>
             {renderList()}
         </div>
-    )
-}
-export default PoliticsList
+    );
+};
+export default PoliticsList;
