@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 function SportsList() {
     const [sport, setSport] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3002/api/sport/')
+        axios.get('/api/sport/')
             .then(res => { setSport(res.data) })
             .catch(error => console.log(error))
     }, []);
 
     const deleteItem = (id) => {
-        axios.delete(`http://localhost:3002/api/sport/${id}`)
+        axios.delete(`/api/sport/${id}`)
         .then(res => { window.location = '/sportsList' })
     };
 

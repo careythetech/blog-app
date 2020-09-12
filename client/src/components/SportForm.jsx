@@ -17,14 +17,14 @@ const SportForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        axios.post('http://localhost:3002/api/sport/add', sportData)
+        axios.post('/api/sport/add', sportData)
             .then(res => window.location = '/sportsList')
             .catch(error => console.log(error))
     };
 
     const handleEdit = (id, e) => {
         e.preventDefault()
-        axios.put(`http://localhost:3002/api/sport/${id}`, sportData)
+        axios.put(`/api/sport/${id}`, sportData)
             .then(res => window.location = '/sportsList')
             .catch(error => console.log(error))
         console.log(e)

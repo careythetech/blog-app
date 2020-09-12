@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 function CovidList() {
     const [covid, setCovid] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3002/api/covid/')
+        axios.get('/api/covid/')
             .then(res => { setCovid(res.data) })
             .catch(error => console.log(error))
     }, []);
 
     const deleteItem = (id) => {
-        axios.delete(`http://localhost:3002/api/covid/${id}`)
+        axios.delete(`/api/covid/${id}`)
         .then(res => { window.location = '/covidsList' })
     };
 

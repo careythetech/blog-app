@@ -17,14 +17,14 @@ const CovidForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        axios.post('http://localhost:3002/api/covid/add', covidData)
+        axios.post('/api/covid/add', covidData)
             .then(res => window.location = '/covidsList')
             .catch(error => console.log(error))
     };
 
     const handleEdit = (id, e) => {
         e.preventDefault()
-        axios.put(`http://localhost:3002/api/covid/${id}`, covidData)
+        axios.put(`/api/covid/${id}`, covidData)
             .then(res => window.location = '/covidsList')
             .catch(error => console.log(error))
         console.log(e)

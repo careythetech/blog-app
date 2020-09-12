@@ -17,14 +17,14 @@ const CovidForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        axios.post('http://localhost:3002/api/politic/add', politicData)
+        axios.post('/api/politic/add', politicData)
             .then(res => window.location = '/politicsList')
             .catch(error => console.log(error))
     };
 
     const handleEdit = (id, e) => {
         e.preventDefault()
-        axios.put(`http://localhost:3002/api/politic/${id}`, politicData)
+        axios.put(`/api/politic/${id}`, politicData)
             .then(res => window.location = '/politicsList')
             .catch(error => console.log(error))
         console.log(e)

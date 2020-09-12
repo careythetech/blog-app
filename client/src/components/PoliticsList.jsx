@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 function PoliticsList() {
     const [politic, setPolitic] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3002/api/politic/')
+        axios.get('/api/politic/')
             .then(res => { setPolitic(res.data) })
             .catch(error => console.log(error))
     }, []);
 
     const deleteItem = (id) => {
-        axios.delete(`http://localhost:3002/api/politic/${id}`)
+        axios.delete(`/api/politic/${id}`)
         .then(res => { window.location = '/politicsList' })
     };
 
