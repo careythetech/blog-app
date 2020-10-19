@@ -23,8 +23,6 @@ function App() {
       <Route path='/addSport' exact component={SportForm} />
       <Route path='/addCovid' exact component={CovidForm} />
       <Route path='/addPolitic' exact component={PoliticForm} />
-      
-      {/* <Footer /> */}
     </div>
   );
 }
