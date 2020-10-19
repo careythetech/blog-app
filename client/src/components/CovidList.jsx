@@ -22,7 +22,7 @@ function CovidList() {
             <p>{item.description}</p>
             <h5>{item.authorname}</h5>
             <p>{item.date}</p>
-            <button onClick={() => deleteItem(item._id)}>Delete Item</button>
+            <button onClick={() => deleteItem(item._id)}>DELETE NEWS</button>
             <Link to='/addCovid' >Add Covid News </Link>
             <Link to={{ pathname: '/addCovid',
                 aboutProps: { title: item.title, authorname: 
@@ -31,7 +31,7 @@ function CovidList() {
     ));
     return (
         <div>
-            <h1>Covid News</h1>
+            <h1>COVID NEWS</h1>
             {renderList()}
         </div>
     );

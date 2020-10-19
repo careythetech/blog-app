@@ -22,16 +22,16 @@ function SportsList() {
             <p>{item.description}</p>
             <h5>{item.authorname}</h5>
             <p>{item.date}</p>
-            <button onClick={() => deleteItem(item._id)}>delete item</button>
-            <Link to='/addSport' >Add Sports News </Link>
+            <button onClick={() => deleteItem(item._id)}>DELETE NEWS</button>
+            <Link to='/addSport' >ADD SPORTS NEWS </Link>
             <Link to={{ pathname: '/addSport',
                 aboutProps: { title: item.title, authorname: 
-                item.authorname, date: item.date, id: item._id } }} >Edit Sport News </Link>
+                item.authorname, date: item.date, id: item._id } }} >EDIT SPORTS NEWS </Link>
         </div>
     ));
     return (
         <div>
-            <h1>Sport News</h1>
+            <h1>SPORTS NEWS</h1>
             {renderList()}
         </div>
     );

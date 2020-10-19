@@ -22,16 +22,16 @@ function PoliticsList() {
             <h5>{item.authorname}</h5>
             <p>{item.description}</p>
             <p>{item.date}</p>
-            <button onClick={() => deleteItem(item._id)}>Delete Item</button>
-            <Link to='/addPolitic' >Add Politics News </Link>
+            <button onClick={() => deleteItem(item._id)}>DELETE NEWS</button>
+            <Link to='/addPolitic' >ADD POLITICS NEWS</Link>
             <Link to={{ pathname: '/addPolitic',
                 aboutProps: { title: item.title, authorname: 
-                item.authorname, date: item.date, id: item._id, description:item.description } }} >Edit Politics News </Link>
+                item.authorname, date: item.date, id: item._id, description:item.description } }} >EDIT SPORTS NEWS </Link>
         </div>
     ));
     return (
         <div>
-            <h1>Politic News</h1>
+            <h1>POLITICS NEWS</h1>
             {renderList()}
         </div>
     );
