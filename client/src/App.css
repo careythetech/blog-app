@@ -1,5 +1,5 @@
 body {
-  background: tomato;
+  background: url(https://i.pinimg.com/originals/f3/a0/d3/f3a0d3fa58cde65f6f1ba7499e8d470d.jpg) no-repeat center fixed;
   font-family: 'Jura', sans-serif;
   
 }
@@ -10,17 +10,15 @@ body {
   margin: 70px;
   padding-left: 10px;
   padding-right: 10px;
-  
-  
 }
 
 .w-75 {
   width: 75%!important;
   padding: 10px;
   margin-right: 28px;
-  border: 2px solid black;
+  border: 2px solid lightgray;
   border-radius: 50px 20px;
-  background: lightgreen;
+  background: transparent;
   
 }
 
@@ -34,9 +32,7 @@ form{
   
   
 }
-.main-nav{
-  background: tomato;
-}
+
 
 .list{
   width: 75%!important;
@@ -44,16 +40,15 @@ form{
   padding-right: 50px ;
   border: 2px solid black;
   border-radius: 50px 20px;
-  background: lightgreen;
+  background: transparent;
   margin: auto;
-  
+  margin-bottom: 5rem;
 }
 
 button {
   padding: 5px;
   margin: 10px;
   border-radius: 50px;
-  background: lightgreen; 
   display: flex;
   justify-items: center;
   align-content: space-between;
@@ -65,23 +60,19 @@ a {
   margin: 10px;
   border-radius: 50px;
   border: 2px solid black;
-  background: lightgreen; 
   display: flex;
   justify-items: center;
   align-content: space-between;
   text-align: center;
-  color:black;
-  /* margin-right: 800px; */
-  /* padding-left: 38px; */
+  color:whitesmoke;
 }
 
 
 a:hover {
-  background-color: white;
+  background-color: wheat;
 }
 
 a:link, a:visited {
-  background-color: #f44336;
   color: white;
   padding: 14px 25px;
   text-align: center;
@@ -90,14 +81,28 @@ a:link, a:visited {
 }
 
 .jumbotron {
-  background-color: tomato;
+  background: transparent;
+  color: black;
 }
 .navbar{
-  background-color: black;
+  color: white;
 }
+
 .btn1{
   align-content: center;
 }
+
 h1{
   text-align: center;
+  color: black;
 }
+
+p{
+  color: whitesmoke;
+}
+
+.lead{
+  color: black;
+  text-align: center;
+}
+

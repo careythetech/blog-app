@@ -18,7 +18,7 @@ const Header = () => {
             </nav>
             <div className="jumbotron jumbotron-fluid"  >
                 <div className="container">
-                    <h1 className="display-4">Welcome To The Atlanta Blog House</h1>
+                    <h1 className="display-4">Welcome To The Atlanta Blog</h1>
                     <p className="lead">Get Your Updated's In Atlanta Today!</p>
                 </div>
             </div>

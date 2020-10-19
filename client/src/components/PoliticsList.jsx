@@ -22,7 +22,7 @@ function PoliticsList() {
             <h5>{item.authorname}</h5>
             <p>{item.description}</p>
             <p>{item.date}</p>
-            <button onClick={() => deleteItem(item._id)}>delete item</button>
+            <button onClick={() => deleteItem(item._id)}>Delete Item</button>
             <Link to='/addPolitic' >Add Politics News </Link>
             <Link to={{ pathname: '/addPolitic',
                 aboutProps: { title: item.title, authorname: 
