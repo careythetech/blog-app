@@ -22,11 +22,11 @@ function SportsList() {
             <p>{item.description}</p>
             <h5>{item.authorname}</h5>
             <p>{item.date}</p>
-            <button onClick={() => deleteItem(item._id)}>DELETE NEWS</button>
             <Link to='/addSport' >ADD SPORTS NEWS </Link>
             <Link to={{ pathname: '/addSport',
                 aboutProps: { title: item.title, authorname: 
                 item.authorname, date: item.date, id: item._id } }} >EDIT SPORTS NEWS </Link>
+                <button onClick={() => deleteItem(item._id)}>DELETE NEWS</button>
         </div>
     ));
     return (
